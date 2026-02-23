@@ -1,0 +1,33 @@
+{
+  "name": "@mcp/warp10",
+  "version": "0.1.0",
+  "description": "MCP server for interacting with Warp10 time series database",
+  "main": "dist/index.js",
+  "type": "module",
+  "bin": {
+    "mcp-warp10": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/index.ts",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "warp10",
+    "time-series",
+    "database"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "axios": "^1.7.9",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "tsx": "^4.20.0",
+    "typescript": "^5.7.2"
+  }
+}
