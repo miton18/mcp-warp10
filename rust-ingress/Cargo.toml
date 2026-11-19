@@ -1,0 +1,26 @@
+[package]
+name = "rust-ingress"
+version = "0.1.0"
+edition = "2021"
+description = "Experimental Warp 10 ingress in Rust with relaxed owner/producer handling"
+license = "MIT"
+
+[workspace]
+
+[features]
+default = []
+kafka = ["dep:rdkafka"]
+
+[dependencies]
+axum = "0.8"
+tokio = { version = "1", features = ["full"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+hex = "0.4"
+thiserror = "2"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+rdkafka = { version = "0.37", optional = true }
+
+[dev-dependencies]
+tower = { version = "0.5", features = ["util"] }

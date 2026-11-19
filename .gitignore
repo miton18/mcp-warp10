@@ -7,3 +7,4 @@ coverage/
 .vscode/
 *.swp
 *.swo
+rust-ingress/target/
